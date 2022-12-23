@@ -10,17 +10,25 @@
 <body>
 	<h1>Order Qeue</h1>
 	<div class="orders-div">
+<?php
+	foreach($orders as $order){
+?>
+	
 		<div class="order-div">
 			<form action="">
-				<h2>No.</h2>
+				<h2><?= $order['id']; ?></h2>
 				<input type="submit" class="remove-btn" value="X">
 			</form>
 			<form action="">
-				<textarea name="" id="" cols="35" rows="10">1 tea 1 beef</textarea>
+				<textarea name="" id="" cols="35" rows="5"><?= $order['order']; ?></textarea>
 				<input type="submit" class="update-btn" value="update">
 			</form>
 		</div>
+<?php
+	}
+?>
 	</div>
+
 
 	<div class="orders-div">
 		<form class="add-order-frm" action="">

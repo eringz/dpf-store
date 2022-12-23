@@ -18,8 +18,15 @@ class Orders extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	/* 
+		DOCU: This function is the index page of a website.
+			  It displays all exitsting orders
+	*/
 	public function index()
 	{
-		$this->load->view('orders_without_ajax');
+		$result['orders'] = $this->order->fetch_all();
+
+		$this->load->view('orders_without_ajax', $result);
 	}
 }

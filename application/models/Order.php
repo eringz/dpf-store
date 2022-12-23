@@ -8,7 +8,10 @@
             DOCU: This function retrieve all stored orders.
             OWNER: Ron Garcia Santos
         */
-
+        function fetch_all()
+        {
+            return $this->db->query('SELECT * FROM orders')->result_array();
+        }
 
         /*
             DOCU: This function adds and stores a new orders.
