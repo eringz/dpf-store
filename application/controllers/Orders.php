@@ -66,13 +66,7 @@ class Orders extends CI_Controller {
 	// 	redirect('/')
 	// }
 	
-	/*									WITH AJAX							*/
-	// public function index_html()
-	// {
-	// 	$result['orders'] = $this->orders->fetch_all();
-	// 	$this->load->view('partials/orders', $result );
-	// }
-	
+	/*									WITH AJAX							*/	
 	/* 
 		DOCU: This function is the index page of a website.
 			  It displays all exitsting orders.
