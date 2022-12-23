@@ -1,3 +1,62 @@
 *{
     font-family: sans-serif;
 }
+    h1{
+        margin: 20px;
+    }
+    .orders-div{
+        margin: 20px;
+        padding: 20px;
+    }
+        .order-div{
+            display: inline-block;
+            border: 1px solid gray;
+            padding: 20px;
+            width: 400px;
+        }
+                h2{
+                    display: inline-block;
+                    text-align: center;  
+                    width: 350px;
+                }
+                .remove-btn{
+                    background-color: red;
+                    color: white;
+                    border: 1px solid red;
+                    padding: 10px;
+                }
+                textarea, .update-btn, #add-order-btn{
+                    text-align: center;
+                    font-size: 1.1rem;
+                }
+                textarea{
+                    border: none;
+                    padding: 20px;
+                    display: block;
+                }
+                .update-btn{
+                    background-color: blue;
+                    color: white;
+                    padding: 10px 30px;
+                    margin: 20px 130px;
+                    border: 1px solid blue;
+                }
+                .remove-btn, .update-btn, #add-order-btn{
+                    border-radius: 3px;
+                }  
+
+            .add-order-frm{
+                background-color: #FFE599;
+                padding: 20px;
+            }
+                #add-order-input{
+                    margin-left: 500px;
+                    width: 500px;
+                    height: 30px;
+                }
+                #add-order-btn{
+                    background-color: green;
+                    color: white;
+                    border: 1px solid green;
+                    padding: 10px 20px;
+                }
