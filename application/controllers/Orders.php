@@ -47,9 +47,21 @@ class Orders extends CI_Controller {
 		DOCU: This function is to collect data from users input to update an existing order.
 		OWNER: Ron Garcia Santos
 	*/
-	public function update()
+	public function update($id)
 	{
-		
+		$update_order = $this->input->post();
+		$this->order->update($update_order, $id);
+
+		redirect('/');
+	}
+
+	/*
+		DOCU: This function is to specify specific order to delete.
+		OWNER: Ron Garcia Santos
+	*/
+	public function destroy($id){
+		$this->order->destroy($id);
+		redirect('/');
 	}
 
 }
