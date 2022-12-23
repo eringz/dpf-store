@@ -20,7 +20,7 @@
 				<input type="submit" class="remove-btn" value="X">
 			</form>
 			<form action="">
-				<textarea name="" id="" cols="35" rows="5"><?= $order['order']; ?></textarea>
+				<textarea name="" id="" cols="35" rows="5"><?= $order['description']; ?></textarea>
 				<input type="submit" class="update-btn" value="update">
 			</form>
 		</div>
@@ -29,10 +29,9 @@
 ?>
 	</div>
 
-
 	<div class="orders-div">
-		<form class="add-order-frm" action="">
-			<input type="text" id="add-order-input" name="order">
+		<form class="add-order-frm" action="/orders/create" method="POST">
+			<input type="text" id="add-order-input" name="description">
 			<input type="submit" id="add-order-btn" value="Order">
 		</form>
 	</div>

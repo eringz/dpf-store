@@ -21,7 +21,8 @@ class Orders extends CI_Controller {
 
 	/* 
 		DOCU: This function is the index page of a website.
-			  It displays all exitsting orders
+			  It displays all exitsting orders.
+		OWNER: Ron Garcia Santos
 	*/
 	public function index()
 	{
@@ -29,4 +30,26 @@ class Orders extends CI_Controller {
 
 		$this->load->view('orders_without_ajax', $result);
 	}
+
+	/*
+		DOCU: This funciton is to collect data from users input to add a new order.
+		OWNER: Ron Garcia Santos
+	*/
+	public function create()
+	{
+		$new_order = $this->input->post();
+		$this->order->create($new_order);
+
+		redirect('/');
+	}
+
+	/*
+		DOCU: This function is to collect data from users input to update an existing order.
+		OWNER: Ron Garcia Santos
+	*/
+	public function update()
+	{
+		
+	}
+
 }
