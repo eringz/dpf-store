@@ -1,9 +1,8 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Order extends CI_Model
+    class Order_without_ajax extends CI_Model
     {
-        
         /*
             DOCU: This function retrieve all stored orders.
             OWNER: Ron Garcia Santos
