@@ -67,13 +67,23 @@ class Orders extends CI_Controller {
 	// }
 	
 	/*									WITH AJAX							*/
+	// public function index_html()
+	// {
+	// 	$result['orders'] = $this->orders->fetch_all();
+	// 	$this->load->view('partials/orders', $result );
+	// }
+	
+	/* 
+		DOCU: This function is the index page of a website.
+			  It displays all exitsting orders.
+		OWNER: Ron Garcia Santos
+	*/
 	public function index()
 	{
-		$result['orders'] = $this->order->fetch_all();
-
-		$this->load->view('orders_without_ajax', $result);
+		$this->load->view('orders_withajax');
 	}
 
+	
 	/*
 		DOCU: This funciton is to collect data from users input to add a new order.
 		OWNER: Ron Garcia Santos
@@ -81,9 +91,13 @@ class Orders extends CI_Controller {
 	public function create()
 	{
 		$new_order = $this->input->post();
-		$this->order->create($new_order);
 
-		redirect('/');
+		if(strlen($new_order['description']) > 0){
+			$this->order->create($new_order);
+		}
+		
+		$result['orders'] = $this->order->fetch_all();
+		$this->load->view('partials/orders', $result );
 	}
 
 	/*
@@ -95,7 +109,10 @@ class Orders extends CI_Controller {
 		$update_order = $this->input->post();
 		$this->order->update($update_order, $id);
 
-		redirect('/');
+		$result['orders'] = $this->order->fetch_all();
+		$this->load->view('partials/orders', $result );
+
+
 	}
 
 	/*
@@ -104,6 +121,9 @@ class Orders extends CI_Controller {
 	*/
 	public function destroy($id){
 		$this->order->destroy($id);
-		redirect('/')
+
+		$result['orders'] = $this->order->fetch_all();
+		$this->load->view('partials/orders', $result );
+
 	}
 }

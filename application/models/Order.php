@@ -1,7 +1,7 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Order_without_ajax extends CI_Model
+    class Order extends CI_Model
     {
         /*
             DOCU: This function retrieve all stored orders.
