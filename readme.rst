@@ -3,8 +3,9 @@ DPF STORE
 ###################
 An e-commerce application built with modern web technologies. The project provides a lightweight online store solution with a product catalog, shopping cart, and order management features.
 
-## Features
+************
 Features
+************
 
 - **Product catalog** — Browse products with descriptions and images.
 - **Shopping cart** — Add, update, or remove items from the cart.
@@ -12,20 +13,14 @@ Features
 - **Admin management** — Add, edit, or delete products.
 - **Responsive design** — Optimized for desktop and mobile devices.
 
-##Tech Stack
+************
+Tech Stach
+************
 
 - PHP / CodeIgniter
 - MySQL
 - AJAX
 - HTML / CSS / JavaScript
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/eringz/dpf-store.git
-   cd dpf-store
-
 
 ###################
 What is CodeIgniter
