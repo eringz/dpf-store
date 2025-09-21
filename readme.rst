@@ -1,3 +1,8 @@
+###################
+DPF STORE
+###################
+
+
 # DPF Store
 
 An e-commerce application built with modern web technologies. The project provides a lightweight online store solution with a product catalog, shopping cart, and order management features.
