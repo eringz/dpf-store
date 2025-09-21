@@ -10,7 +10,7 @@ An e-commerce application built with modern web technologies. The project provid
 - **Admin management** — Add, edit, or delete products.
 - **Responsive design** — Optimized for desktop and mobile devices.
 
-Tech Stack
+##Tech Stack
 
 - PHP / CodeIgniter
 - MySQL
